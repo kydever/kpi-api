@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->comment('用户表');
         });
     }
 

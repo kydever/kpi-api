@@ -30,6 +30,7 @@ class CreateDimensionsTable extends Migration
             $table->unsignedBigInteger('leader_id')->comment('领导 ID');
             $table->unsignedBigInteger('user_id')->comment('下属 ID');
             $table->timestamps();
+            $table->comment('评价表');
         });
     }
 

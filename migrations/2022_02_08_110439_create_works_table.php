@@ -21,10 +21,11 @@ class CreateWorksTable extends Migration
     public function up(): void
     {
         Schema::create('works', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->string('name', 10)->comment('工作名称');
-            $table->unsignedTinyInteger('grade', 3)->comment('分数');
+            $table->unsignedTinyInteger('grade')->comment('分数');
             $table->timestamps();
+            $table->comment('工作表');
         });
     }
 
