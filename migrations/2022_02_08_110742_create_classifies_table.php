@@ -24,7 +24,7 @@ class CreateClassifiesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('work_id')->comment('工作 ID');
             $table->string('name', 10)->comment('分类名称');
-            $table->unsignedTinyInteger('grade', 3)->comment('分数');
+            $table->unsignedTinyInteger('grade')->comment('分数');
             $table->timestamps();
             $table->comment('分类表');
         });

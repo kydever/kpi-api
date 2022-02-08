@@ -25,7 +25,7 @@ class CreateDimensionsTable extends Migration
             $table->unsignedBigInteger('work_id')->nullable()->comment('工作 ID');
             $table->unsignedBigInteger('classify_id')->nullable()->comment('分类 ID');
             $table->string('review', 50)->comment('评价维度');
-            $table->unsignedTinyInteger('score', 3)->comment('分值');
+            $table->unsignedTinyInteger('score')->comment('分值');
             $table->string('review_description', 100)->nullable()->comment('评价维度说明');
             $table->unsignedBigInteger('leader_id')->comment('领导 ID');
             $table->unsignedBigInteger('user_id')->comment('下属 ID');
