@@ -13,16 +13,20 @@ use Hyperf\Database\Migrations\Migration;
 use Hyperf\Database\Schema\Blueprint;
 use Hyperf\Database\Schema\Schema;
 
-class CreateUsersTable extends Migration
+class CreateClassifiesTable extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->comment('用户表');
+        Schema::create('classifies', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('work_id')->comment('工作 ID');
+            $table->string('name', 10)->comment('分类名称');
+            $table->unsignedTinyInteger('grade')->comment('分数');
+            $table->timestamps();
+            $table->comment('分类表');
         });
     }
 
@@ -31,6 +35,6 @@ class CreateUsersTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('classifies');
     }
 }
