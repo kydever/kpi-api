@@ -21,7 +21,7 @@ class CreateClassifiesTable extends Migration
     public function up(): void
     {
         Schema::create('classifies', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->unsignedBigInteger('work_id')->comment('工作 ID');
             $table->string('name', 10)->comment('分类名称');
             $table->unsignedTinyInteger('grade')->comment('分数');
