@@ -42,7 +42,7 @@
         "hyperf/redis": "3.0.*",
         "hyperf/server": "3.0.*",
         "hyperf/utils": "3.0.*",
-        "hyperf/validation": "*",
+        "hyperf/validation": "3.0.*",
         "limingxinleo/hyperf-utils": "^3.2"
     },
     "require-dev": {
