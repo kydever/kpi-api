@@ -13,7 +13,7 @@ namespace App\Request;
 
 use Hyperf\Validation\Request\FormRequest;
 
-class WorkRequest extends FormRequest
+class ClassifyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,18 +28,9 @@ class WorkRequest extends FormRequest
      */
     public function rules(): array
     {
-        switch ($this->getMethod()) {
-            case 'POST':
-                $name = 'required|string|max:10|unique:users';
-                break;
-            case 'PATCH':
-                $id = $this->route('id');
-                $name = 'required|string|max:10|unique:users,name,' . $id;
-                break;
-        }
-
         return [
-            'name' => $name,
+            'work_id' => 'required|integer|exists:works,id',
+            'name' => 'required|string|max:10|unique:classifies',
             'grade' => 'required|integer|between:1,100',
         ];
     }

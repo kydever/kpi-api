@@ -16,3 +16,4 @@ Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController::
 Router::post('/works', [App\Controller\WorkController::class, 'store']);
 Router::patch('/works/{id:\d+}', [App\Controller\WorkController::class, 'update']);
 Router::delete('/works/{id:\d+}', [App\Controller\WorkController::class, 'destroy']);
+Router::post('/classifies', [App\Controller\ClassifyController::class, 'store']);
