@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Kernel\Http\Response;
+use App\Service\UserAuth;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Psr\Container\ContainerInterface;
 
@@ -25,5 +26,10 @@ abstract class Controller
     {
         $this->response = $container->get(Response::class);
         $this->request = $container->get(RequestInterface::class);
+    }
+
+    public function getCurrentUserId()
+    {
+        return UserAuth::instance()->build()->getUserId();
     }
 }

@@ -21,4 +21,9 @@ class ErrorCode extends AbstractConstants
      * @Message("Server Error")
      */
     public const SERVER_ERROR = 500;
+
+    /**
+     * @Message("权限不足")
+     */
+    public const OPERATION_INVALID = 701;
 }
