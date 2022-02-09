@@ -18,6 +18,7 @@ use Hyperf\Contract\StdoutLoggerInterface;
 use Hyperf\Di\Exception\CircularDependencyException;
 use Hyperf\ExceptionHandler\ExceptionHandler;
 use Hyperf\HttpMessage\Exception\HttpException;
+use Hyperf\Validation\ValidationException;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Log\LoggerInterface;
@@ -38,6 +39,9 @@ class BusinessExceptionHandler extends ExceptionHandler
     public function handle(Throwable $throwable, ResponseInterface $response)
     {
         switch (true) {
+            case $throwable instanceof ValidationException:
+                $this->logger->warning($message = $throwable->validator->errors()->first());
+                return $this->response->fail($throwable->getCode(), $message);
             case $throwable instanceof HttpException:
                 return $this->response->handleException($throwable);
             case $throwable instanceof BusinessException:

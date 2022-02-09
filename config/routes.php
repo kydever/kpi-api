@@ -12,3 +12,7 @@ declare(strict_types=1);
 use Hyperf\HttpServer\Router\Router;
 
 Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController::index');
+
+Router::post('/works', [App\Controller\WorkController::class, 'store']);
+Router::patch('/works/{id:\d+}', [App\Controller\WorkController::class, 'update']);
+Router::delete('/works/{id:\d+}', [App\Controller\WorkController::class, 'destroy']);
