@@ -13,7 +13,7 @@ namespace App\Model;
 
 /**
  * @property int $id
- * @property int $work_id
+ * @property int $type
  * @property string $name
  * @property int $grade
  * @property \Carbon\Carbon $created_at
@@ -29,10 +29,10 @@ class Classify extends Model
     /**
      * The attributes that are mass assignable.
      */
-    protected array $fillable = ['id', 'work_id', 'name', 'grade', 'created_at', 'updated_at'];
+    protected array $fillable = ['id', 'type', 'name', 'grade', 'created_at', 'updated_at'];
 
     /**
      * The attributes that should be cast to native types.
      */
-    protected array $casts = ['id' => 'integer', 'work_id' => 'integer', 'grade' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
+    protected array $casts = ['id' => 'integer', 'type' => 'integer', 'grade' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
 }

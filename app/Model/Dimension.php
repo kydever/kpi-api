@@ -13,7 +13,6 @@ namespace App\Model;
 
 /**
  * @property int $id
- * @property int $work_id
  * @property int $classify_id
  * @property string $review
  * @property int $score
@@ -33,10 +32,10 @@ class Dimension extends Model
     /**
      * The attributes that are mass assignable.
      */
-    protected array $fillable = ['id', 'work_id', 'classify_id', 'review', 'score', 'review_description', 'leader_id', 'user_id', 'created_at', 'updated_at'];
+    protected array $fillable = ['id', 'classify_id', 'review', 'score', 'review_description', 'leader_id', 'user_id', 'created_at', 'updated_at'];
 
     /**
      * The attributes that should be cast to native types.
      */
-    protected array $casts = ['id' => 'integer', 'work_id' => 'integer', 'classify_id' => 'integer', 'score' => 'integer', 'leader_id' => 'integer', 'user_id' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
+    protected array $casts = ['id' => 'integer', 'classify_id' => 'integer', 'score' => 'integer', 'leader_id' => 'integer', 'user_id' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
 }

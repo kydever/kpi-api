@@ -39,7 +39,7 @@ class ClassifyRequest extends FormRequest
         }
 
         return [
-            'work_id' => 'required|integer|exists:works,id',
+            'type' => 'required|integer',
             'name' => $name,
             'grade' => 'required|integer|between:1,100',
         ];

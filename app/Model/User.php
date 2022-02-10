@@ -29,7 +29,7 @@ namespace App\Model;
  * @property string $status
  * @property string $union_id
  * @property string $user_id
- * @property bool $is_leader
+ * @property int $is_leader
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  */
