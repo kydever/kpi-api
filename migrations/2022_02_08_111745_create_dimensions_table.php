@@ -22,7 +22,6 @@ class CreateDimensionsTable extends Migration
     {
         Schema::create('dimensions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('work_id')->nullable()->comment('工作 ID');
             $table->unsignedBigInteger('classify_id')->nullable()->comment('分类 ID');
             $table->string('review', 50)->comment('评价维度');
             $table->unsignedTinyInteger('score')->comment('分值');

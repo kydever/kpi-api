@@ -22,8 +22,8 @@ class CreateClassifiesTable extends Migration
     {
         Schema::create('classifies', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('work_id')->comment('工作 ID');
-            $table->string('name', 10)->comment('分类名称');
+            $table->tinyInteger('type')->default(1)->comment('1: 常规工作 2: 管理工作');
+            $table->string('name', 10)->nullable()->comment('分类名称');
             $table->unsignedTinyInteger('grade')->comment('分数');
             $table->timestamps();
             $table->comment('分类表');
