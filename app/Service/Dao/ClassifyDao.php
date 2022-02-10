@@ -28,7 +28,7 @@ class ClassifyDao extends Dao
             $model = new Classify();
         }
         $model->type = $attributes['type'];
-        $model->name = $attributes['name'];
+        $model->name = $attributes['name'] ?? null;
         $model->grade = $attributes['grade'];
         $model->save();
 

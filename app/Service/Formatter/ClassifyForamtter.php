@@ -19,7 +19,7 @@ class ClassifyForamtter extends Formatter
     {
         return [
             'id' => $model->id,
-            'work_id' => $model->work_id,
+            'type' => $model->type,
             'name' => $model->name,
             'grade' => $model->grade,
             'created_at' => $model->created_at,
