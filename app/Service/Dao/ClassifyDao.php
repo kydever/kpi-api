@@ -11,22 +11,23 @@ declare(strict_types=1);
  */
 namespace App\Service\Dao;
 
-use App\Model\Work;
+use App\Model\Classify;
 
-class WorkDao extends Dao
+class ClassifyDao extends Dao
 {
-    public function findById(int $id): ?Work
+    public function findById(int $id): ?Classify
     {
-        return Work::find($id);
+        return Classify::find($id);
     }
 
-    public function createOrUpdate(int $userId, array $attributes, int $id = 0): Work
+    public function createOrUpdate(int $userId, array $attributes, int $id = 0): Classify
     {
         $this->isLoader($userId);
         $model = $this->findById($id);
         if (empty($model)) {
-            $model = new Work();
+            $model = new Classify();
         }
+        $model->work_id = $attributes['work_id'];
         $model->name = $attributes['name'];
         $model->grade = $attributes['grade'];
         $model->save();

@@ -28,7 +28,7 @@ abstract class Controller
         $this->request = $container->get(RequestInterface::class);
     }
 
-    public function getCurrentUserId()
+    protected function getCurrentUserId()
     {
         return UserAuth::instance()->build()->getUserId();
     }
