@@ -33,7 +33,7 @@ class ClassifyRequest extends FormRequest
                 $name = 'required|string|max:10|unique:classifies';
                 break;
             case 'PATCH':
-                $id = route('id');
+                $id = $this->route('id');
                 $name = 'required|string|max:10|unique:classifies,name,' . $id;
                 break;
         }

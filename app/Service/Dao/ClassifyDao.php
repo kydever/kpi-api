@@ -11,12 +11,9 @@ declare(strict_types=1);
  */
 namespace App\Service\Dao;
 
-use App\Constants\ErrorCode;
-use App\Exception\BusinessException;
 use App\Model\Classify;
-use Han\Utils\Service;
 
-class ClassifyDao extends Service
+class ClassifyDao extends Dao
 {
     public function findById(int $id): ?Classify
     {
@@ -36,14 +33,5 @@ class ClassifyDao extends Service
         $model->save();
 
         return $model;
-    }
-
-    protected function isLoader(int $userId): bool
-    {
-        if (! di(UserDao::class)->isLeader($userId)) {
-            throw new BusinessException(ErrorCode::OPERATION_INVALID);
-        }
-
-        return true;
     }
 }

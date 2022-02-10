@@ -30,11 +30,11 @@ class WorkRequest extends FormRequest
     {
         switch ($this->getMethod()) {
             case 'POST':
-                $name = 'required|string|max:10|unique:users';
+                $name = 'required|string|max:10|unique:works';
                 break;
             case 'PATCH':
                 $id = $this->route('id');
-                $name = 'required|string|max:10|unique:users,name,' . $id;
+                $name = 'required|string|max:10|unique:works,name,' . $id;
                 break;
         }
 

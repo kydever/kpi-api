@@ -13,9 +13,11 @@ namespace App\Service;
 
 use App\Service\Dao\ClassifyDao;
 use Han\Utils\Service;
+use Hyperf\Di\Annotation\Inject;
 
 class ClassifyService extends Service
 {
+    #[Inject]
     protected ClassifyDao $dao;
 
     public function createOrUpdate(int $currentUserId, array $attributes, int $id = 0)

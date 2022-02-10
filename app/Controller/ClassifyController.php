@@ -38,7 +38,7 @@ class ClassifyController extends Controller
         return $this->response->success($this->foramtter->base($model));
     }
 
-    public function update(ClassifyRequest $request, $id)
+    public function update(ClassifyRequest $request, int $id)
     {
         $model = $this->dao->createOrUpdate($this->getCurrentUserId(), $request->all(), $id);
 

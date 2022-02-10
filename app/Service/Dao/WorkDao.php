@@ -11,12 +11,9 @@ declare(strict_types=1);
  */
 namespace App\Service\Dao;
 
-use App\Constants\ErrorCode;
-use App\Exception\BusinessException;
 use App\Model\Work;
-use Han\Utils\Service;
 
-class WorkDao extends Service
+class WorkDao extends Dao
 {
     public function findById(int $id): ?Work
     {
@@ -45,15 +42,6 @@ class WorkDao extends Service
             return true;
         }
         $model->delete();
-
-        return true;
-    }
-
-    protected function isLoader(int $userId): bool
-    {
-        if (! di(UserDao::class)->isLeader($userId)) {
-            throw new BusinessException(ErrorCode::OPERATION_INVALID);
-        }
 
         return true;
     }
