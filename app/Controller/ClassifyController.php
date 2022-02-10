@@ -21,7 +21,7 @@ use Hyperf\HttpServer\Contract\ResponseInterface;
 class ClassifyController extends Controller
 {
     #[Inject]
-    protected ClassifyService $dao;
+    protected ClassifyService $service;
 
     #[Inject]
     protected ClassifyForamtter $foramtter;
@@ -33,15 +33,22 @@ class ClassifyController extends Controller
 
     public function store(ClassifyRequest $request)
     {
-        $model = $this->dao->createOrUpdate($this->getCurrentUserId(), $request->all());
+        $model = $this->service->createOrUpdate($this->getCurrentUserId(), $request->all());
 
         return $this->response->success($this->foramtter->base($model));
     }
 
     public function update(ClassifyRequest $request, int $id)
     {
-        $model = $this->dao->createOrUpdate($this->getCurrentUserId(), $request->all(), $id);
+        $model = $this->service->createOrUpdate($this->getCurrentUserId(), $request->all(), $id);
 
         return $this->response->success($this->foramtter->base($model));
+    }
+
+    public function destroy(int $id)
+    {
+        $this->service->delete($this->getCurrentUserId(), $id);
+
+        return $this->response->success(true);
     }
 }

@@ -34,4 +34,16 @@ class ClassifyDao extends Dao
 
         return $model;
     }
+
+    public function delete(int $userId, int $id): bool
+    {
+        $this->isLoader($userId);
+        $model = $this->findById($id);
+        if (empty($model)) {
+            return true;
+        }
+        $model->delete();
+
+        return true;
+    }
 }
