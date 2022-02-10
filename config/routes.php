@@ -18,4 +18,4 @@ Router::patch('/works/{id:\d+}', [App\Controller\WorkController::class, 'update'
 Router::delete('/works/{id:\d+}', [App\Controller\WorkController::class, 'destroy']);
 Router::post('/classifies', [App\Controller\ClassifyController::class, 'store']);
 Router::patch('/classifies/{id:\d+}', [App\Controller\ClassifyController::class, 'update']);
-Router::delete ( '/classifies/{id:\d+}', [ App\Controller\ClassifyController::class, 'destroy' ] );
+Router::delete('/classifies/{id:\d+}', [App\Controller\ClassifyController::class, 'destroy']);
