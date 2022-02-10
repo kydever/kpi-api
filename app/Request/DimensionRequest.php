@@ -29,7 +29,7 @@ class DimensionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'classify_id' => 'required|integer|exists:classifies,id',
+            'classify_id' => 'required|integer|exists:dimensions,id',
             'review' => 'required|string|max:50',
             'score' => 'required|integer|between:1,100',
             'review_description' => 'nullable|string|max:100',

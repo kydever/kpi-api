@@ -37,4 +37,18 @@ class DimensionController extends Controller
 
         return $this->response->success($this->formatter->base($model));
     }
+
+    public function update(DimensionRequest $request, int $id)
+    {
+        $model = $this->service->createOrUpdate($this->getCurrentUserId(), $request->all(), $id);
+
+        return $this->response->success($this->formatter->base($model));
+    }
+
+    public function destroy(int $id)
+    {
+        $this->service->delete($this->getCurrentUserId(), $id);
+
+        return $this->response->success(true);
+    }
 }

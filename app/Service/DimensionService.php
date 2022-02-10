@@ -24,4 +24,9 @@ class DimensionService extends Service
     {
         return $this->dao->createOrUpdate($currentUserId, $attributes, $id);
     }
+
+    public function delete(int $currentUserId, int $id)
+    {
+        return $this->dao->delete($currentUserId, $id);
+    }
 }
