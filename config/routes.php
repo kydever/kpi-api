@@ -16,3 +16,7 @@ Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController::
 Router::post('/classifies', [App\Controller\ClassifyController::class, 'store']);
 Router::patch('/classifies/{id:\d+}', [App\Controller\ClassifyController::class, 'update']);
 Router::delete('/classifies/{id:\d+}', [App\Controller\ClassifyController::class, 'destroy']);
+
+Router::post('/dimensions', [App\Controller\DimensionController::class, 'store']);
+Router::patch('/dimensions/{id:\d+}', [App\Controller\DimensionController::class, 'update']);
+Router::delete('/dimensions/{id:\d+}', [App\Controller\DimensionController::class, 'destroy']);
