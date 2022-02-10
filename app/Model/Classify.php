@@ -11,6 +11,8 @@ declare(strict_types=1);
  */
 namespace App\Model;
 
+use Hyperf\Database\Model\Relations\HasMany;
+
 /**
  * @property int $id
  * @property int $type
@@ -35,4 +37,9 @@ class Classify extends Model
      * The attributes that should be cast to native types.
      */
     protected array $casts = ['id' => 'integer', 'type' => 'integer', 'grade' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
+
+    public function dimensions(): HasMany
+    {
+        return $this->hasMany(Dimension::class, 'classify_id', 'id');
+    }
 }
