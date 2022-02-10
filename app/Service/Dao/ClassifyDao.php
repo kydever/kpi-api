@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace App\Service\Dao;
 
 use App\Model\Classify;
+use Hyperf\DbConnection\Db;
 
 class ClassifyDao extends Dao
 {
@@ -42,7 +43,10 @@ class ClassifyDao extends Dao
         if (empty($model)) {
             return true;
         }
-        $model->delete();
+        Db::transaction(function () use ($model, $id) {
+            $model->delete();
+            Db::select('delete from `dimensions` where `classify_id` = ?', [$id]);
+        });
 
         return true;
     }
