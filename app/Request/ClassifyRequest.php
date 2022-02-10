@@ -28,9 +28,19 @@ class ClassifyRequest extends FormRequest
      */
     public function rules(): array
     {
+        switch ($this->getMethod()) {
+            case 'POST':
+                $name = 'required|string|max:10|unique:classifies';
+                break;
+            case 'PATCH':
+                $id = route('id');
+                $name = 'required|string|max:10|unique:classifies,name,' . $id;
+                break;
+        }
+
         return [
             'work_id' => 'required|integer|exists:works,id',
-            'name' => 'required|string|max:10|unique:classifies',
+            'name' => $name,
             'grade' => 'required|integer|between:1,100',
         ];
     }
