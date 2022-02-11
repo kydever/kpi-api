@@ -13,6 +13,7 @@ namespace App\Service\Dao;
 
 use App\Model\Classify;
 use Hyperf\DbConnection\Db;
+use Hyperf\Utils\Collection;
 
 class ClassifyDao extends Dao
 {
@@ -23,7 +24,7 @@ class ClassifyDao extends Dao
 
     public function createOrUpdate(int $userId, array $attributes, int $id = 0): Classify
     {
-        $this->isLoader($userId);
+        $this->isLeader($userId);
         $model = $this->findById($id);
         if (empty($model)) {
             $model = new Classify();
@@ -38,7 +39,7 @@ class ClassifyDao extends Dao
 
     public function delete(int $userId, int $id): bool
     {
-        $this->isLoader($userId);
+        $this->isLeader($userId);
         $model = $this->findById($id);
         if (empty($model)) {
             return true;
@@ -49,5 +50,12 @@ class ClassifyDao extends Dao
         });
 
         return true;
+    }
+
+    public function all(int $userId): Collection
+    {
+        $this->isLeader($userId);
+
+        return Classify::orderByDesc('id')->get();
     }
 }

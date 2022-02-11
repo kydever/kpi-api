@@ -12,11 +12,10 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Request\DimensionRequest;
+use App\Request\PaginationRequest;
 use App\Service\DimensionService;
 use App\Service\Formatter\DimensionFormatter;
 use Hyperf\Di\Annotation\Inject;
-use Hyperf\HttpServer\Contract\RequestInterface;
-use Hyperf\HttpServer\Contract\ResponseInterface;
 
 class DimensionController extends Controller
 {
@@ -26,9 +25,15 @@ class DimensionController extends Controller
     #[Inject]
     protected DimensionFormatter $formatter;
 
-    public function index(RequestInterface $request, ResponseInterface $response)
+    public function index(PaginationRequest $page)
     {
-        return $response->raw('Hello Hyperf!');
+        $review = $this->request->input('review');
+        [ $count, $items ] = $this->service->getWhereByAll($this->getCurrentUserId(), $review, $page->offset(), $page->limit());
+
+        return $this->response->success([
+            'count' => $count,
+            'items' => $items,
+        ]);
     }
 
     public function store(DimensionRequest $request)

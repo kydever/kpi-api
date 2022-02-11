@@ -17,7 +17,7 @@ use Han\Utils\Service;
 
 class Dao extends Service
 {
-    protected function isLoader(int $userId): bool
+    protected function isLeader(int $userId): bool
     {
         if (! di(UserDao::class)->isLeader($userId)) {
             throw new BusinessException(ErrorCode::OPERATION_INVALID);

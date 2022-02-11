@@ -11,8 +11,6 @@ declare(strict_types=1);
  */
 namespace App\Model;
 
-use Hyperf\Database\Model\Relations\BelongsTo;
-
 /**
  * @property int $id
  * @property int $classify_id
@@ -41,8 +39,8 @@ class Dimension extends Model
      */
     protected array $casts = ['id' => 'integer', 'classify_id' => 'integer', 'score' => 'integer', 'leader_id' => 'integer', 'user_id' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
 
-    public function classify(): BelongsTo
+    public function own(int $leader_id): bool
     {
-        return $this->belongsTo(Classify::class, 'classify_id', 'id');
+        return $this->leader_id === $leader_id;
     }
 }
