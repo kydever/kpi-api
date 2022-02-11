@@ -11,8 +11,6 @@ declare(strict_types=1);
  */
 namespace App\Model;
 
-use Hyperf\Database\Model\Relations\BelongsTo;
-
 /**
  * @property int $id
  * @property int $classify_id
