@@ -28,7 +28,9 @@ class DimensionController extends Controller
 
     public function index(RequestInterface $request, ResponseInterface $response)
     {
-        return $response->raw('Hello Hyperf!');
+        $models = $this->service->all();
+
+        return $this->response->success($this->formatter->formatList($models));
     }
 
     public function store(DimensionRequest $request)

@@ -29,4 +29,9 @@ class DimensionService extends Service
     {
         return $this->dao->delete($currentUserId, $id);
     }
+
+    public function all()
+    {
+        return $this->dao->all();
+    }
 }

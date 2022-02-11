@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace App\Service\Dao;
 
 use App\Model\Dimension;
+use Hyperf\Utils\Collection;
 
 class DimensionDao extends Dao
 {
@@ -48,5 +49,10 @@ class DimensionDao extends Dao
         $model->delete();
 
         return true;
+    }
+
+    public function all(): Collection
+    {
+        return Dimension::orderByDesc('id')->get();
     }
 }

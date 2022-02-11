@@ -30,7 +30,7 @@ class ClassifyController extends Controller
     {
         $models = $this->service->all();
 
-        return $this->foramtter->formatList($models);
+        return $this->response->success($this->foramtter->formatList($models));
     }
 
     public function store(ClassifyRequest $request)
