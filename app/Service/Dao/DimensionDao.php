@@ -12,10 +12,14 @@ declare(strict_types=1);
 namespace App\Service\Dao;
 
 use App\Model\Dimension;
-use Hyperf\Utils\Collection;
+use App\Service\Formatter\DimensionFormatter;
+use Hyperf\Di\Annotation\Inject;
 
 class DimensionDao extends Dao
 {
+    #[Inject]
+    protected DimensionFormatter $formatter;
+
     public function findById(int $id): ?Dimension
     {
         return Dimension::find($id);
@@ -51,8 +55,16 @@ class DimensionDao extends Dao
         return true;
     }
 
-    public function all(): Collection
+    public function getWhereByAll(int $userId, ?string $review, int $offset = 0, int $limit = 10, array $columns = ['*']): array
     {
-        return Dimension::orderByDesc('id')->get();
+        $this->isLoader($userId);
+        $builder = Dimension::query();
+        $builder->where('review', 'like', '%' . $review . '%')
+            ->orderBy('id', 'desc');
+
+        [ $count, $models ] = $this->factory->model->pagination($builder, $offset, $limit, $columns);
+        $items = $this->formatter->formatList($models);
+
+        return [$count, $items];
     }
 }

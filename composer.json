@@ -43,6 +43,7 @@
         "hyperf/server": "3.0.*",
         "hyperf/utils": "3.0.*",
         "hyperf/validation": "3.0.*",
+        "hyperf/paginator": "3.0.*",
         "limingxinleo/hyperf-utils": "^3.2"
     },
     "require-dev": {

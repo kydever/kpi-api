@@ -30,8 +30,8 @@ class DimensionService extends Service
         return $this->dao->delete($currentUserId, $id);
     }
 
-    public function all()
+    public function getWhereByAll(int $currentUserId, ?string $review, int $offset = 0, int $limit = 10, array $columns = ['*'])
     {
-        return $this->dao->all();
+        return $this->dao->getWhereByAll($currentUserId, $review, $offset, $limit, $columns);
     }
 }
