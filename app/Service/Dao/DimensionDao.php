@@ -66,8 +66,8 @@ class DimensionDao extends Dao
     public function getWhereByAll(int $userId, ?string $review, int $offset = 0, int $limit = 10, array $columns = ['*']): array
     {
         $this->isLeader($userId);
-        $builder = Dimension::query();
-        $builder->where('review', 'like', '%' . $review . '%')
+        $builder = Dimension::where('leader_id', $userId)
+            ->where('review', 'like', '%' . $review . '%')
             ->orderBy('id', 'desc');
 
         [ $count, $models ] = $this->factory->model->pagination($builder, $offset, $limit, $columns);
