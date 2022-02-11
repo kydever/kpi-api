@@ -15,12 +15,12 @@ Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController::
 
 Router::get('/classifies', [App\Controller\ClassifyController::class, 'index']);
 Router::post('/classifies', [App\Controller\ClassifyController::class, 'store']);
-Router::patch('/classifies/{id:\d+}', [App\Controller\ClassifyController::class, 'update']);
+Router::put('/classifies/{id:\d+}', [App\Controller\ClassifyController::class, 'update']);
 Router::delete('/classifies/{id:\d+}', [App\Controller\ClassifyController::class, 'destroy']);
 
 Router::get('/dimensions', [App\Controller\DimensionController::class, 'index']);
 Router::post('/dimensions', [App\Controller\DimensionController::class, 'store']);
-Router::patch('/dimensions/{id:\d+}', [App\Controller\DimensionController::class, 'update']);
+Router::put('/dimensions/{id:\d+}', [App\Controller\DimensionController::class, 'update']);
 Router::delete('/dimensions/{id:\d+}', [App\Controller\DimensionController::class, 'destroy']);
 
 Router::get('/user/dimensions', [App\Controller\UserDimensionController::class, 'index']);
