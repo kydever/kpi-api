@@ -45,4 +45,9 @@ class Dimension extends Model
     {
         return $this->belongsTo(Classify::class, 'classify_id', 'id');
     }
+
+    public function own(int $leader_id): bool
+    {
+        return $this->leader_id === $leader_id;
+    }
 }
