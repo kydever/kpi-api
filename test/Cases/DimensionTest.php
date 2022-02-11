@@ -17,21 +17,23 @@ use HyperfTest\HttpTestCase;
  * @internal
  * @coversNothing
  */
-class ClassifyTest extends HttpTestCase
+class DimensionTest extends HttpTestCase
 {
     public function testIndex()
     {
-        $data = $this->get('classifies');
+        $data = $this->get('dimensions');
         $this->assertNotEmpty($data);
         $this->assertSame(0, $data['code']);
     }
 
     public function testStore()
     {
-        $data = $this->post('classifies', [
-            'type' => 1,
-            'name' => '测试分类',
-            'grade' => 100,
+        $data = $this->post('dimensions', [
+            'classify_id' => 1,
+            'review' => '测试维度评价',
+            'score' => 100,
+            'review_description' => '测试维度评价说明',
+            'user_id' => 1,
         ]);
         $this->assertNotEmpty($data);
         $this->assertSame(0, $data['code']);
@@ -39,10 +41,12 @@ class ClassifyTest extends HttpTestCase
 
     public function testUpdate()
     {
-        $data = $this->client->put('classifies/1', [
-            'type' => 1,
-            'name' => '测试分类更新',
-            'grade' => 100,
+        $data = $this->client->put('dimensions/1', [
+            'classify_id' => 1,
+            'review' => '测试评价维度',
+            'score' => 100,
+            'review_description' => '测试评价维度说明',
+            'user_id' => 1,
         ]);
         $this->assertNotEmpty($data);
         $this->assertSame(0, $data['code']);
@@ -50,7 +54,7 @@ class ClassifyTest extends HttpTestCase
 
     public function testDestroy()
     {
-        $data = $this->client->delete('classifies/1');
+        $data = $this->client->delete('dimensions/1');
         $this->assertNotEmpty($data);
         $this->assertSame(0, $data['code']);
     }
