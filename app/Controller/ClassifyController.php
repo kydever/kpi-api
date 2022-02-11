@@ -28,7 +28,9 @@ class ClassifyController extends Controller
 
     public function index(RequestInterface $request, ResponseInterface $response)
     {
-        return $response->raw('Hello Hyperf!');
+        $models = $this->service->all();
+
+        return $this->foramtter->formatList($models);
     }
 
     public function store(ClassifyRequest $request)

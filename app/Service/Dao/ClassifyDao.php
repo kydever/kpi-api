@@ -13,6 +13,7 @@ namespace App\Service\Dao;
 
 use App\Model\Classify;
 use Hyperf\DbConnection\Db;
+use Hyperf\Utils\Collection;
 
 class ClassifyDao extends Dao
 {
@@ -49,5 +50,10 @@ class ClassifyDao extends Dao
         });
 
         return true;
+    }
+
+    public function all(): Collection
+    {
+        return Classify::orderByDesc('id')->get();
     }
 }
