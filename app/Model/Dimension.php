@@ -41,11 +41,6 @@ class Dimension extends Model
      */
     protected array $casts = ['id' => 'integer', 'classify_id' => 'integer', 'score' => 'integer', 'leader_id' => 'integer', 'user_id' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
 
-    public function classify(): BelongsTo
-    {
-        return $this->belongsTo(Classify::class, 'classify_id', 'id');
-    }
-
     public function own(int $leader_id): bool
     {
         return $this->leader_id === $leader_id;
