@@ -52,8 +52,10 @@ class ClassifyDao extends Dao
         return true;
     }
 
-    public function all(): Collection
+    public function all(int $userId): Collection
     {
+        $this->isLoader($userId);
+
         return Classify::orderByDesc('id')->get();
     }
 }
