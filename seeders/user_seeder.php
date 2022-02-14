@@ -1,20 +1,25 @@
 <?php
 
 declare(strict_types=1);
-
-use Hyperf\Database\Seeders\Seeder;
+/**
+ * This file is part of Hyperf.
+ *
+ * @link     https://www.hyperf.io
+ * @document https://hyperf.wiki
+ * @contact  group@hyperf.io
+ * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+ */
 use App\Model\User;
+use Hyperf\Database\Seeders\Seeder;
 
 class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
-        User::create ( [
+        User::create([
             'avatar' => 1,
             'department_ids' => 1,
             'email' => 'test@qq.com',
@@ -32,6 +37,6 @@ class UserSeeder extends Seeder
             'union_id' => 1,
             'user_id' => 1,
             'is_leader' => 1,
-        ] );
+        ]);
     }
 }
