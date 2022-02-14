@@ -19,6 +19,9 @@ use HyperfTest\HttpTestCase;
  */
 class ClassifyTest extends HttpTestCase
 {
+    /**
+     * @depends testStore
+     */
     public function testIndex()
     {
         $data = $this->get('classifies');
@@ -37,6 +40,9 @@ class ClassifyTest extends HttpTestCase
         $this->assertSame(0, $data['code']);
     }
 
+    /**
+     * @depends testStore
+     */
     public function testUpdate()
     {
         $data = $this->client->put('classifies/1', [
