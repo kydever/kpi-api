@@ -25,6 +25,6 @@ class UserDao extends Service
     {
         $model = $this->findById($id);
 
-        return $model->is_leader ? true : false;
+        return (bool) $model?->is_leader;
     }
 }

@@ -30,8 +30,8 @@ class ClassifyService extends Service
         return $this->dao->delete($currentUserId, $id);
     }
 
-    public function all()
+    public function all(int $currentUserId)
     {
-        return $this->dao->all();
+        return $this->dao->all($currentUserId);
     }
 }

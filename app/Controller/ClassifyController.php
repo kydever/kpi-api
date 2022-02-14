@@ -28,7 +28,7 @@ class ClassifyController extends Controller
 
     public function index(RequestInterface $request, ResponseInterface $response)
     {
-        $models = $this->service->all();
+        $models = $this->service->all($this->getCurrentUserId());
 
         return $this->response->success($this->foramtter->formatList($models));
     }
