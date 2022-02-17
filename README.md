@@ -37,5 +37,6 @@ sudo gitlab-runner register -n \
 --docker-privileged \
 --tag-list "unit" \
 --docker-pull-policy "if-not-present"
+
 ```
 
