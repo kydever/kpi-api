@@ -1113,6 +1113,55 @@
             "time": "2021-11-09T09:13:51+00:00"
         },
         {
+            "name": "hyperf/context",
+            "version": "v3.0.0-alpha.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/context.git",
+                "reference": "814c4d289f2db435055bf925538b66b84712c570"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/context/zipball/814c4d289f2db435055bf925538b66b84712c570",
+                "reference": "814c4d289f2db435055bf925538b66b84712c570",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/engine": "^1.1",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\Context\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A coroutine context library.",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "Context",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "docs": "https://hyperf.wiki",
+                "issues": "https://github.com/hyperf/hyperf/issues",
+                "pull-request": "https://github.com/hyperf/hyperf/pulls",
+                "source": "https://github.com/hyperf/hyperf"
+            },
+            "time": "2022-02-21T02:03:25+00:00"
+        },
+        {
             "name": "hyperf/contract",
             "version": "v3.0.0-alpha.1",
             "source": {
@@ -2235,16 +2284,16 @@
         },
         {
             "name": "hyperf/redis",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-alpha.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/redis.git",
-                "reference": "75575be14f079893aae20dcc6c38d0578f3b5565"
+                "reference": "7175e9e2b7bb11258ef48e275acf650ef28d2751"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/redis/zipball/75575be14f079893aae20dcc6c38d0578f3b5565",
-                "reference": "75575be14f079893aae20dcc6c38d0578f3b5565",
+                "url": "https://api.github.com/repos/hyperf/redis/zipball/7175e9e2b7bb11258ef48e275acf650ef28d2751",
+                "reference": "7175e9e2b7bb11258ef48e275acf650ef28d2751",
                 "shasum": ""
             },
             "require": {
@@ -2291,7 +2340,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2021-12-30T11:04:00+00:00"
+            "time": "2022-02-21T02:03:25+00:00"
         },
         {
             "name": "hyperf/server",
@@ -2409,20 +2458,21 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-alpha.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/utils.git",
-                "reference": "f9bd4e03b93e5e869c66e6a6f50520afcb5535f7"
+                "reference": "94eef0e67a8837a331afdd7237718896de894943"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/utils/zipball/f9bd4e03b93e5e869c66e6a6f50520afcb5535f7",
-                "reference": "f9bd4e03b93e5e869c66e6a6f50520afcb5535f7",
+                "url": "https://api.github.com/repos/hyperf/utils/zipball/94eef0e67a8837a331afdd7237718896de894943",
+                "reference": "94eef0e67a8837a331afdd7237718896de894943",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^2.0",
+                "hyperf/context": "~3.0.0",
                 "hyperf/contract": "~3.0.0",
                 "hyperf/coordinator": "~3.0.0",
                 "hyperf/engine": "^1.2|^2.0",
@@ -2472,7 +2522,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2022-02-05T11:26:37+00:00"
+            "time": "2022-02-21T02:03:25+00:00"
         },
         {
             "name": "hyperf/validation",
