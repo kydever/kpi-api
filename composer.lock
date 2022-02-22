@@ -1324,16 +1324,16 @@
         },
         {
             "name": "hyperf/di",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-alpha.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/di.git",
-                "reference": "5ef32a8fc44014c602549855fd1d650ff22c7094"
+                "reference": "c2e27c288b89ce13223d96c10cc3e725ad9b7b5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/di/zipball/5ef32a8fc44014c602549855fd1d650ff22c7094",
-                "reference": "5ef32a8fc44014c602549855fd1d650ff22c7094",
+                "url": "https://api.github.com/repos/hyperf/di/zipball/c2e27c288b89ce13223d96c10cc3e725ad9b7b5b",
+                "reference": "c2e27c288b89ce13223d96c10cc3e725ad9b7b5b",
                 "shasum": ""
             },
             "require": {
@@ -1343,7 +1343,7 @@
                 "php": ">=8.0",
                 "php-di/phpdoc-reader": "^2.2",
                 "psr/container": "^1.0|^2.0",
-                "symfony/finder": "^5.0",
+                "symfony/finder": "^5.0|^6.0",
                 "vlucas/phpdotenv": "^5.0"
             },
             "suggest": {
@@ -1383,7 +1383,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2022-01-30T08:51:23+00:00"
+            "time": "2022-02-21T09:17:24+00:00"
         },
         {
             "name": "hyperf/dispatcher",
