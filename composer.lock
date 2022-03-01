@@ -1113,6 +1113,55 @@
             "time": "2021-11-09T09:13:51+00:00"
         },
         {
+            "name": "hyperf/context",
+            "version": "v3.0.0-alpha.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/context.git",
+                "reference": "e7a54d15286ac559e19e65890466ab18987da902"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/context/zipball/e7a54d15286ac559e19e65890466ab18987da902",
+                "reference": "e7a54d15286ac559e19e65890466ab18987da902",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/engine": "^1.2|^2.0",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\Context\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A coroutine context library.",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "Context",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "docs": "https://hyperf.wiki",
+                "issues": "https://github.com/hyperf/hyperf/issues",
+                "pull-request": "https://github.com/hyperf/hyperf/pulls",
+                "source": "https://github.com/hyperf/hyperf"
+            },
+            "time": "2022-02-21T04:08:56+00:00"
+        },
+        {
             "name": "hyperf/contract",
             "version": "v3.0.0-alpha.1",
             "source": {
@@ -2122,16 +2171,16 @@
         },
         {
             "name": "hyperf/pool",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-alpha.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/pool.git",
-                "reference": "29fd2d652e1e6697ce10565b29f1a695418714f4"
+                "reference": "17d87210c325ed819950f106d7fff54f45c6a5fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/pool/zipball/29fd2d652e1e6697ce10565b29f1a695418714f4",
-                "reference": "29fd2d652e1e6697ce10565b29f1a695418714f4",
+                "url": "https://api.github.com/repos/hyperf/pool/zipball/17d87210c325ed819950f106d7fff54f45c6a5fe",
+                "reference": "17d87210c325ed819950f106d7fff54f45c6a5fe",
                 "shasum": ""
             },
             "require": {
@@ -2172,7 +2221,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2021-12-15T05:55:43+00:00"
+            "time": "2022-03-01T03:13:47+00:00"
         },
         {
             "name": "hyperf/process",
@@ -2235,16 +2284,16 @@
         },
         {
             "name": "hyperf/redis",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-alpha.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/redis.git",
-                "reference": "75575be14f079893aae20dcc6c38d0578f3b5565"
+                "reference": "789594102d76dd744265ca2e5e04c32582a85a1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/redis/zipball/75575be14f079893aae20dcc6c38d0578f3b5565",
-                "reference": "75575be14f079893aae20dcc6c38d0578f3b5565",
+                "url": "https://api.github.com/repos/hyperf/redis/zipball/789594102d76dd744265ca2e5e04c32582a85a1f",
+                "reference": "789594102d76dd744265ca2e5e04c32582a85a1f",
                 "shasum": ""
             },
             "require": {
@@ -2291,7 +2340,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2021-12-30T11:04:00+00:00"
+            "time": "2022-03-01T03:13:47+00:00"
         },
         {
             "name": "hyperf/server",
@@ -2409,20 +2458,21 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-alpha.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/utils.git",
-                "reference": "f9bd4e03b93e5e869c66e6a6f50520afcb5535f7"
+                "reference": "80ad18d225327450cc3f32e7f36a0f0482f8bd4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/utils/zipball/f9bd4e03b93e5e869c66e6a6f50520afcb5535f7",
-                "reference": "f9bd4e03b93e5e869c66e6a6f50520afcb5535f7",
+                "url": "https://api.github.com/repos/hyperf/utils/zipball/80ad18d225327450cc3f32e7f36a0f0482f8bd4a",
+                "reference": "80ad18d225327450cc3f32e7f36a0f0482f8bd4a",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^2.0",
+                "hyperf/context": "~3.0.0",
                 "hyperf/contract": "~3.0.0",
                 "hyperf/coordinator": "~3.0.0",
                 "hyperf/engine": "^1.2|^2.0",
@@ -2433,9 +2483,9 @@
                 "ext-swoole": "Required to use methods related to swoole (>=4.5).",
                 "hyperf/di": "Required to use ExceptionNormalizer",
                 "nikic/php-parser": "Required to use PhpParser. (^4.0)",
-                "symfony/property-access": "Required to use SymfonyNormalizer (^5.0)",
-                "symfony/serializer": "Required to use SymfonyNormalizer (^5.0)",
-                "symfony/var-dumper": "Required to use the dd function (^5.0)."
+                "symfony/property-access": "Required to use SymfonyNormalizer (^5.0|^6.0)",
+                "symfony/serializer": "Required to use SymfonyNormalizer (^5.0|^6.0)",
+                "symfony/var-dumper": "Required to use the dd function (^5.0|^6.0)."
             },
             "type": "library",
             "extra": {
@@ -2472,7 +2522,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2022-02-05T11:26:37+00:00"
+            "time": "2022-03-01T03:13:47+00:00"
         },
         {
             "name": "hyperf/validation",
