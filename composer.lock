@@ -1113,6 +1113,55 @@
             "time": "2021-11-09T09:13:51+00:00"
         },
         {
+            "name": "hyperf/context",
+            "version": "v3.0.0-alpha.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/context.git",
+                "reference": "e7a54d15286ac559e19e65890466ab18987da902"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/context/zipball/e7a54d15286ac559e19e65890466ab18987da902",
+                "reference": "e7a54d15286ac559e19e65890466ab18987da902",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/engine": "^1.2|^2.0",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\Context\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A coroutine context library.",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "Context",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "docs": "https://hyperf.wiki",
+                "issues": "https://github.com/hyperf/hyperf/issues",
+                "pull-request": "https://github.com/hyperf/hyperf/pulls",
+                "source": "https://github.com/hyperf/hyperf"
+            },
+            "time": "2022-02-21T04:08:56+00:00"
+        },
+        {
             "name": "hyperf/contract",
             "version": "v3.0.0-alpha.1",
             "source": {
@@ -2295,16 +2344,16 @@
         },
         {
             "name": "hyperf/server",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-alpha.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/server.git",
-                "reference": "e4c4dd620c42d817cb133ed8198c784ee5eee109"
+                "reference": "22a35c6f79c0d427a6412bd360328eb73943903f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/server/zipball/e4c4dd620c42d817cb133ed8198c784ee5eee109",
-                "reference": "e4c4dd620c42d817cb133ed8198c784ee5eee109",
+                "url": "https://api.github.com/repos/hyperf/server/zipball/22a35c6f79c0d427a6412bd360328eb73943903f",
+                "reference": "22a35c6f79c0d427a6412bd360328eb73943903f",
                 "shasum": ""
             },
             "require": {
@@ -2314,7 +2363,7 @@
                 "psr/container": "^1.0|^2.0",
                 "psr/event-dispatcher": "^1.0",
                 "psr/log": "^1.0|^2.0|^3.0",
-                "symfony/console": "^5.0"
+                "symfony/console": "^5.0|^6.0"
             },
             "suggest": {
                 "hyperf/event": "Dump the info after server start.",
@@ -2352,7 +2401,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2022-02-10T05:18:20+00:00"
+            "time": "2022-03-01T03:13:47+00:00"
         },
         {
             "name": "hyperf/translation",
@@ -2409,20 +2458,21 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-alpha.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/utils.git",
-                "reference": "f9bd4e03b93e5e869c66e6a6f50520afcb5535f7"
+                "reference": "80ad18d225327450cc3f32e7f36a0f0482f8bd4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/utils/zipball/f9bd4e03b93e5e869c66e6a6f50520afcb5535f7",
-                "reference": "f9bd4e03b93e5e869c66e6a6f50520afcb5535f7",
+                "url": "https://api.github.com/repos/hyperf/utils/zipball/80ad18d225327450cc3f32e7f36a0f0482f8bd4a",
+                "reference": "80ad18d225327450cc3f32e7f36a0f0482f8bd4a",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^2.0",
+                "hyperf/context": "~3.0.0",
                 "hyperf/contract": "~3.0.0",
                 "hyperf/coordinator": "~3.0.0",
                 "hyperf/engine": "^1.2|^2.0",
@@ -2433,9 +2483,9 @@
                 "ext-swoole": "Required to use methods related to swoole (>=4.5).",
                 "hyperf/di": "Required to use ExceptionNormalizer",
                 "nikic/php-parser": "Required to use PhpParser. (^4.0)",
-                "symfony/property-access": "Required to use SymfonyNormalizer (^5.0)",
-                "symfony/serializer": "Required to use SymfonyNormalizer (^5.0)",
-                "symfony/var-dumper": "Required to use the dd function (^5.0)."
+                "symfony/property-access": "Required to use SymfonyNormalizer (^5.0|^6.0)",
+                "symfony/serializer": "Required to use SymfonyNormalizer (^5.0|^6.0)",
+                "symfony/var-dumper": "Required to use the dd function (^5.0|^6.0)."
             },
             "type": "library",
             "extra": {
@@ -2472,7 +2522,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2022-02-05T11:26:37+00:00"
+            "time": "2022-03-01T03:13:47+00:00"
         },
         {
             "name": "hyperf/validation",
@@ -3713,16 +3763,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.4.3",
+            "version": "v5.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "a2a86ec353d825c75856c6fd14fac416a7bdb6b8"
+                "reference": "d8111acc99876953f52fe16d4c50eb60940d49ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/a2a86ec353d825c75856c6fd14fac416a7bdb6b8",
-                "reference": "a2a86ec353d825c75856c6fd14fac416a7bdb6b8",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d8111acc99876953f52fe16d4c50eb60940d49ad",
+                "reference": "d8111acc99876953f52fe16d4c50eb60940d49ad",
                 "shasum": ""
             },
             "require": {
@@ -3792,7 +3842,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.4.3"
+                "source": "https://github.com/symfony/console/tree/v5.4.5"
             },
             "funding": [
                 {
@@ -3808,7 +3858,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-26T16:28:35+00:00"
+            "time": "2022-02-24T12:45:35+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3974,12 +4024,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4709,12 +4759,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\String\\": ""
-                },
                 "files": [
                     "Resources/functions.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Component\\String\\": ""
+                },
                 "exclude-from-classmap": [
                     "/Tests/"
                 ]
