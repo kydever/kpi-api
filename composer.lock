@@ -1113,17 +1113,66 @@
             "time": "2021-11-09T09:13:51+00:00"
         },
         {
-            "name": "hyperf/contract",
-            "version": "v3.0.0-alpha.1",
+            "name": "hyperf/context",
+            "version": "v3.0.0-rc.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hyperf/contract.git",
-                "reference": "e38122f0999ee92173d2efa8f1c297b978719781"
+                "url": "https://github.com/hyperf/context.git",
+                "reference": "a07213182cd2c0c011410797a8f63128a83ebc63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/contract/zipball/e38122f0999ee92173d2efa8f1c297b978719781",
-                "reference": "e38122f0999ee92173d2efa8f1c297b978719781",
+                "url": "https://api.github.com/repos/hyperf/context/zipball/a07213182cd2c0c011410797a8f63128a83ebc63",
+                "reference": "a07213182cd2c0c011410797a8f63128a83ebc63",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/engine": "^1.2|^2.0",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\Context\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A coroutine context library.",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "Context",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "docs": "https://hyperf.wiki",
+                "issues": "https://github.com/hyperf/hyperf/issues",
+                "pull-request": "https://github.com/hyperf/hyperf/pulls",
+                "source": "https://github.com/hyperf/hyperf"
+            },
+            "time": "2022-06-04T07:05:08+00:00"
+        },
+        {
+            "name": "hyperf/contract",
+            "version": "v3.0.0-rc.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/contract.git",
+                "reference": "c8e7aa012248384ba98456a5478d454907f9c690"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/contract/zipball/c8e7aa012248384ba98456a5478d454907f9c690",
+                "reference": "c8e7aa012248384ba98456a5478d454907f9c690",
                 "shasum": ""
             },
             "require": {
@@ -1157,20 +1206,20 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2022-02-10T05:18:20+00:00"
+            "time": "2022-07-13T12:46:57+00:00"
         },
         {
             "name": "hyperf/coordinator",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-rc.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/coordinator.git",
-                "reference": "463673fb9d083ab1dfd27867ab8b991a2035ff58"
+                "reference": "5c08f65e505b92f8e63e3d1f33a44c0b177ef876"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/coordinator/zipball/463673fb9d083ab1dfd27867ab8b991a2035ff58",
-                "reference": "463673fb9d083ab1dfd27867ab8b991a2035ff58",
+                "url": "https://api.github.com/repos/hyperf/coordinator/zipball/5c08f65e505b92f8e63e3d1f33a44c0b177ef876",
+                "reference": "5c08f65e505b92f8e63e3d1f33a44c0b177ef876",
                 "shasum": ""
             },
             "require": {
@@ -1206,7 +1255,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2022-02-01T08:32:56+00:00"
+            "time": "2022-05-30T02:52:13+00:00"
         },
         {
             "name": "hyperf/database",
@@ -1444,20 +1493,20 @@
         },
         {
             "name": "hyperf/engine",
-            "version": "v1.2.1",
+            "version": "v1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/engine.git",
-                "reference": "be371c486d1e0809fd84d248f554229c985409a7"
+                "reference": "b94510c9202f0a1dbd5ce2bf5ba233f71187c03b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/engine/zipball/be371c486d1e0809fd84d248f554229c985409a7",
-                "reference": "be371c486d1e0809fd84d248f554229c985409a7",
+                "url": "https://api.github.com/repos/hyperf/engine/zipball/b94510c9202f0a1dbd5ce2bf5ba233f71187c03b",
+                "reference": "b94510c9202f0a1dbd5ce2bf5ba233f71187c03b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4"
+                "php": ">=8.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.0",
@@ -1472,7 +1521,10 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.3-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\Engine\\ConfigProvider"
                 }
             },
             "autoload": {
@@ -1490,9 +1542,9 @@
             ],
             "support": {
                 "issues": "https://github.com/hyperf/engine/issues",
-                "source": "https://github.com/hyperf/engine/tree/v1.2.1"
+                "source": "https://github.com/hyperf/engine/tree/v1.3.3"
             },
-            "time": "2022-01-22T14:24:31+00:00"
+            "time": "2022-08-06T08:27:30+00:00"
         },
         {
             "name": "hyperf/event",
@@ -1847,22 +1899,22 @@
         },
         {
             "name": "hyperf/logger",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-rc.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/logger.git",
-                "reference": "9ec51da6d926566a49a30bad4ce4846e31045e6b"
+                "reference": "86901f921dd375e32605390c691056514cdbc9a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/logger/zipball/9ec51da6d926566a49a30bad4ce4846e31045e6b",
-                "reference": "9ec51da6d926566a49a30bad4ce4846e31045e6b",
+                "url": "https://api.github.com/repos/hyperf/logger/zipball/86901f921dd375e32605390c691056514cdbc9a4",
+                "reference": "86901f921dd375e32605390c691056514cdbc9a4",
                 "shasum": ""
             },
             "require": {
                 "hyperf/contract": "~3.0.0",
                 "hyperf/utils": "~3.0.0",
-                "monolog/monolog": "^2.0",
+                "monolog/monolog": "^2.7|^3.1",
                 "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/log": "^1.0|^2.0|^3.0"
@@ -1898,20 +1950,20 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2021-12-03T06:51:32+00:00"
+            "time": "2022-08-06T12:40:02+00:00"
         },
         {
             "name": "hyperf/macroable",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-rc.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/macroable.git",
-                "reference": "76be558e7849f37338b13f43f8b9dc51d58d7226"
+                "reference": "bfd332fbcc84e44bc0c08f9ed305b3ceb71ffde2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/macroable/zipball/76be558e7849f37338b13f43f8b9dc51d58d7226",
-                "reference": "76be558e7849f37338b13f43f8b9dc51d58d7226",
+                "url": "https://api.github.com/repos/hyperf/macroable/zipball/bfd332fbcc84e44bc0c08f9ed305b3ceb71ffde2",
+                "reference": "bfd332fbcc84e44bc0c08f9ed305b3ceb71ffde2",
                 "shasum": ""
             },
             "require": {
@@ -1946,7 +1998,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2021-12-03T06:51:32+00:00"
+            "time": "2022-05-30T02:16:40+00:00"
         },
         {
             "name": "hyperf/model-cache",
@@ -2409,20 +2461,21 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v3.0.0-alpha.1",
+            "version": "v3.0.0-rc.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/utils.git",
-                "reference": "f9bd4e03b93e5e869c66e6a6f50520afcb5535f7"
+                "reference": "552872c0a8bfc7d718e1186d179ba8c397ed515b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/utils/zipball/f9bd4e03b93e5e869c66e6a6f50520afcb5535f7",
-                "reference": "f9bd4e03b93e5e869c66e6a6f50520afcb5535f7",
+                "url": "https://api.github.com/repos/hyperf/utils/zipball/552872c0a8bfc7d718e1186d179ba8c397ed515b",
+                "reference": "552872c0a8bfc7d718e1186d179ba8c397ed515b",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^2.0",
+                "hyperf/context": "~3.0.0",
                 "hyperf/contract": "~3.0.0",
                 "hyperf/coordinator": "~3.0.0",
                 "hyperf/engine": "^1.2|^2.0",
@@ -2433,9 +2486,9 @@
                 "ext-swoole": "Required to use methods related to swoole (>=4.5).",
                 "hyperf/di": "Required to use ExceptionNormalizer",
                 "nikic/php-parser": "Required to use PhpParser. (^4.0)",
-                "symfony/property-access": "Required to use SymfonyNormalizer (^5.0)",
-                "symfony/serializer": "Required to use SymfonyNormalizer (^5.0)",
-                "symfony/var-dumper": "Required to use the dd function (^5.0)."
+                "symfony/property-access": "Required to use SymfonyNormalizer (^5.0|^6.0)",
+                "symfony/serializer": "Required to use SymfonyNormalizer (^5.0|^6.0)",
+                "symfony/var-dumper": "Required to use the dd function (^5.0|^6.0)."
             },
             "type": "library",
             "extra": {
@@ -2472,7 +2525,7 @@
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
             },
-            "time": "2022-02-05T11:26:37+00:00"
+            "time": "2022-07-29T04:52:11+00:00"
         },
         {
             "name": "hyperf/validation",
@@ -2728,16 +2781,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.3.5",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "fd4380d6fc37626e2f799f29d91195040137eba9"
+                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fd4380d6fc37626e2f799f29d91195040137eba9",
-                "reference": "fd4380d6fc37626e2f799f29d91195040137eba9",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/720488632c590286b88b80e62aa3d3d551ad4a50",
+                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50",
                 "shasum": ""
             },
             "require": {
@@ -2750,18 +2803,22 @@
             "require-dev": {
                 "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
-                "elasticsearch/elasticsearch": "^7",
+                "elasticsearch/elasticsearch": "^7 || ^8",
+                "ext-json": "*",
                 "graylog2/gelf-php": "^1.4.2",
+                "guzzlehttp/guzzle": "^7.4",
+                "guzzlehttp/psr7": "^2.2",
                 "mongodb/mongodb": "^1.8",
                 "php-amqplib/php-amqplib": "~2.4 || ^3",
-                "php-console/php-console": "^3.1.3",
-                "phpspec/prophecy": "^1.6.1",
+                "phpspec/prophecy": "^1.15",
                 "phpstan/phpstan": "^0.12.91",
-                "phpunit/phpunit": "^8.5",
-                "predis/predis": "^1.1",
-                "rollbar/rollbar": "^1.3",
-                "ruflin/elastica": ">=0.90@dev",
-                "swiftmailer/swiftmailer": "^5.3|^6.0"
+                "phpunit/phpunit": "^8.5.14",
+                "predis/predis": "^1.1 || ^2.0",
+                "rollbar/rollbar": "^1.3 || ^2 || ^3",
+                "ruflin/elastica": "^7",
+                "swiftmailer/swiftmailer": "^5.3|^6.0",
+                "symfony/mailer": "^5.4 || ^6",
+                "symfony/mime": "^5.4 || ^6"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -2776,7 +2833,6 @@
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
                 "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
-                "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
                 "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
@@ -2811,7 +2867,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.3.5"
+                "source": "https://github.com/Seldaek/monolog/tree/2.8.0"
             },
             "funding": [
                 {
@@ -2823,7 +2879,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-01T21:08:31+00:00"
+            "time": "2022-07-24T11:55:47+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -8240,5 +8296,5 @@
         "ext-swoole": ">=4.5"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
